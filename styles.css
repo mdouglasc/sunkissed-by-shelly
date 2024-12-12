@@ -1,0 +1,518 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2ae1c;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main{
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Ovo', serif;
+    color: #4c7031;
+    font-weight: normal; 
+    text-align: center;
+    padding: 20px;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Ovo', serif;
+    color: #4c7031;
+    font-weight: normal;
+    text-align: center;
+ 
+}
+
+.navbar {
+    background: #f5f5f5;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo {
+    width: 80px;        
+    height: 80px;       
+    border-radius: 50%;  
+    object-fit: scale-down;   
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.menu__item {
+    padding: 0 1rem;
+    height: 80px;
+}
+
+.menu__links {
+    color: #4c7031;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.menu__links:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #af791f;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.main{
+    text-align: center;
+    margin-top: 30px;
+    flex-grow: 1;
+}
+
+.main__img-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    margin: 20px auto; 
+}
+
+#main_img {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 70vh; 
+    aspect-ratio: 16 / 9;
+    object-fit: cover; 
+    margin: 0 auto;
+    margin-bottom: 20px;  
+}
+
+.main__btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #af791f;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.main__btn:hover {
+    transform: scale(1.1);
+    background-color: #c98d2e;
+}
+
+.about__overview{
+    width: 80%; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.27);
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.about__overview h2 {
+    font-size: 2rem; 
+    margin-bottom: 10px;
+}
+
+.about__overview p {
+    line-height: 1.5;
+}
+
+.about__overview a {
+    color: #4c7031;
+    text-decoration: underline; 
+}
+
+.footer__container{
+    background: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.footer__social ul{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    padding: 10px;
+}
+
+.footer__social ul li img{
+    width: 24px;
+    height: 24px;
+}
+
+.footer__social img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.footer__links{
+    margin-top: 10px;
+}
+
+.footer__links a{
+    color: #4c7031;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer__links a:hover{
+    text-decoration: underline;
+}
+
+.footer__copy{
+    margin-top: auto; 
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #af791f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c98d2e;
+}
+
+/*About Us Page*/
+.about__container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.left-section{
+    flex: 1 1 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-section img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.right-section{
+    background-color: rgba(245, 245, 245, 0.27);
+    flex: 1 1 60%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.right-section p{
+    margin-bottom: 15px;
+}
+
+.right-section a{
+    color: #4c7031;
+    text-decoration: underline; 
+}
+
+/*Skincare Guides Page*/
+.routine_container{
+    width: 80%; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.27);
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.routine_container a{
+    color: #4c7031;
+    text-decoration: underline; 
+}
+
+/*Shop Page*/
+.sukissed_products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.27);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; 
+}
+
+.sukissed_products > div {
+    background-color: rgba(245, 245, 245, 0.27);
+    border: 1px solid #4c7031;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.sukissed_products > div:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sukissed_products img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/*Offers Page*/
+.offer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.27);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; 
+}
+
+.offer-container > div {
+    background-color: rgba(245, 245, 245, 0.27);
+    border: 1px solid #4c7031;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.offer-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/*Sign Up Page*/
+.signup_logo{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 20px auto;
+}
+
+.registration_container{
+    background-color: rgba(245, 245, 245, 0.27);
+    height: 100vh;
+    padding: 10px;
+    border-radius: 10px;
+    width: max(40%, 600px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    justify-content: center;
+}
+
+.registration_container h3{
+    font-size: 3rem;
+}
+
+.registration_container form{
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.registration_container form> div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.registration_container form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: #c98d2e;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.registration_container form input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+    background-color: #f4e6ce;
+}
+
+.registration_container button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    font: inherit;
+    background-color: #c98d2e;
+    transition: 150ms ease;
+}
+
+.registration_container button:hover {
+    background-color: rgba(245, 245, 245, 0.27);
+}
+
+form div.incorrect label{
+    background-color: #DC143C;
+}
+
+form div.incorrect input{
+    border-color:#DC143C;
+}
+
+.error-message {
+    color: #DC143C;
+    font-size: 0.875rem;
+    margin-top: 50px;
+    visibility: hidden;
+}
+  
+
+.bootstrap-main {
+    background-color: #f2ae1c;  
+    font-family: 'Lato', sans-serif;  
+}
+
+.contact-form-container {
+    background-color: rgba(245, 245, 245, 0.27);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.bootstrap-main .form-control {
+    font-family: 'Lato', sans-serif; 
+    color: #333;  
+    background-color: white;  
+    border: 1px solid #ccc; 
+}
+
+.bootstrap-main button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    font: inherit;
+    background-color: #c98d2e;
+    transition: 150ms ease;
+}
+
+.bootstrap-main button:hover {
+    background-color: rgba(245, 245, 245, 0.27);
+}
+
+.bootstrap-main h3 {
+    font-family: 'Ovo', serif;
+    color: #4c7031;  
+    font-size: 3rem;
+}
+
+.bootstrap-main label {
+    font-family: 'Ovo', serif;
+    color: #4c7031; 
+}
